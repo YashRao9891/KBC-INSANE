@@ -1389,13 +1389,14 @@ export default function App() {
                         <button
                             className="start-btn"
                             onClick={() => {
-                                if (nameInput.trim() === "" || playerNameInput.trim() === "") return;
+                                if (playerNameInput.trim() === "") return;
                                 primeAudio(); // Unlock audio
                                 localStorage.setItem("kbcPlayerName", playerNameInput.trim());
-                                localStorage.setItem("kbcFriendName", nameInput.trim());
+                                // Default friend name or keep the old one
+                                localStorage.setItem("kbcFriendName", nameInput.trim() || "Your Friend");
                                 localStorage.setItem("kbcAvatar", avatar);
                                 setPlayerName(playerNameInput.trim());
-                                setFriendName(nameInput.trim());
+                                setFriendName(nameInput.trim() || "Your Friend");
                                 setShowCategorySelection(true);
                             }}
                         >
