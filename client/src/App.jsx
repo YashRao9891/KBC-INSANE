@@ -1385,6 +1385,17 @@ export default function App() {
                         )}
                     </div>
 
+                    <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "center", marginTop: "10px" }}>
+                        <input
+                            type="text"
+                            placeholder="Friend's Name (For Lifeline)"
+                            value={nameInput}
+                            onChange={(e) => setNameInput(e.target.value)}
+                            className="friend-input"
+                            style={{ width: '80%', maxWidth: '300px' }}
+                        />
+                    </div>
+
                     <div style={{ display: "flex", gap: "10px", justifyContent: "center", marginTop: "20px" }}>
                         <button
                             className="start-btn"
