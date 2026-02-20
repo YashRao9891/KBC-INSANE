@@ -1,39 +1,11 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import confetti from "canvas-confetti";
+import Confetti from 'react-confetti';
+import { useWindowSize } from 'react-use';
 import "./WinnerScreen.css";
 
 export default function WinnerScreen({ amount, playerName, onRestart }) {
-    useEffect(() => {
-        // Continuous confetti shower
-        const duration = 15 * 1000;
-        const animationEnd = Date.now() + duration;
-        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-        const randomInRange = (min, max) => Math.random() * (max - min) + min;
-
-        const interval = setInterval(function () {
-            const timeLeft = animationEnd - Date.now();
-
-            if (timeLeft <= 0) {
-                return clearInterval(interval);
-            }
-
-            const particleCount = 50 * (timeLeft / duration);
-            confetti({
-                ...defaults,
-                particleCount,
-                origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
-            });
-            confetti({
-                ...defaults,
-                particleCount,
-                origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
-            });
-        }, 250);
-
-        return () => clearInterval(interval);
-    }, []);
+    const { width, height } = useWindowSize();
 
     const getAmountWords = (amt) => {
         if (amt >= 70000000) return "SEVEN CRORE RUPEES ONLY";
@@ -45,6 +17,13 @@ export default function WinnerScreen({ amount, playerName, onRestart }) {
 
     return (
         <div className="winner-container">
+            <Confetti
+                width={width}
+                height={height}
+                numberOfPieces={800}
+                gravity={0.15}
+                colors={['#ffd700', '#ffaa00', '#ffffff', '#00a8ff', '#ff3d3d']}
+            />
             <div className="winner-content">
                 <motion.div
                     initial={{ scale: 0, rotate: -180 }}

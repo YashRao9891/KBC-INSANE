@@ -39,6 +39,50 @@ body {
   position: relative;
   background: radial-gradient(circle at center, #0a1525 0%, #02050a 100%);
   padding: 20px;
+  transition: background 1s ease-in-out;
+}
+
+/* Base states for early questions */
+.difficulty-0,
+.difficulty-1,
+.difficulty-2,
+.difficulty-3,
+.difficulty-4 {
+  background: radial-gradient(circle at center, #0a1525 0%, #02050a 100%);
+}
+
+/* Mid game - Slightly darker, deeper blue */
+.difficulty-5,
+.difficulty-6,
+.difficulty-7,
+.difficulty-8,
+.difficulty-9 {
+  background: radial-gradient(circle at center, #0d1a33 0%, #010305 100%);
+}
+
+/* High Stakes - Intense dark purple/blue with heartbeat pulse */
+.difficulty-10,
+.difficulty-11,
+.difficulty-12,
+.difficulty-13,
+.difficulty-14,
+.difficulty-15 {
+  background: radial-gradient(circle at center, #1a0a25 0%, #030105 100%);
+  animation: heartbeat-bg 2s infinite alternate ease-in-out;
+}
+
+@keyframes heartbeat-bg {
+  0% {
+    background: radial-gradient(circle at center, #1a0a25 0%, #030105 100%);
+  }
+
+  50% {
+    background: radial-gradient(circle at center, #250a15 0%, #050102 100%);
+  }
+
+  100% {
+    background: radial-gradient(circle at center, #1a0a25 0%, #030105 100%);
+  }
 }
 
 /* Particles Canvas */
@@ -217,6 +261,26 @@ body {
   box-shadow: 0 0 25px var(--primary-gold);
 }
 
+.options button.locking {
+  animation: pulse-locking 0.3s infinite alternate ease-in-out;
+  color: #000;
+  font-weight: 700;
+}
+
+@keyframes pulse-locking {
+  0% {
+    background: #ffaa00;
+    box-shadow: 0 0 10px #ffaa00;
+    transform: scale(1.02);
+  }
+
+  100% {
+    background: #fff;
+    box-shadow: 0 0 30px #fff;
+    transform: scale(1.05);
+  }
+}
+
 .options button.correct {
   background: var(--success-green);
   color: #fff;
@@ -386,9 +450,20 @@ body {
   font-weight: 700;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
   transform: scale(1.05);
-  /* Pop out */
   border-radius: 8px;
-  /* Slightly more rounded */
+  animation: gold-pulse 1.5s infinite alternate;
+}
+
+@keyframes gold-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    transform: scale(1.02);
+  }
+
+  100% {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 1);
+    transform: scale(1.08);
+  }
 }
 
 .money-item.active .index,
