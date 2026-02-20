@@ -1294,6 +1294,66 @@ body {
     flex-wrap: wrap;
   }
 
+  .start-btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .start-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .login-section {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .friend-input {
+    width: 100% !important;
+  }
+
+  /* Leaderboard rules to stop wrap-around */
+  .leaderboard-tabs {
+    gap: 5px;
+  }
+
+  .tab-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .top-three-container {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .top-card {
+    width: 90%;
+    transform: none !important;
+    /* Stop the gold/silver scale differences from creating uneven heights on mobile */
+  }
+
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 8px 5px;
+    font-size: 0.8rem;
+  }
+
+  /* The Time column was wrapping terribly. Hide or shrink it if necessary. */
+  .leaderboard-table th:nth-child(5),
+  .leaderboard-table td:nth-child(5) {
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  /* Restored missing rules */
   .lifeline-circle {
     width: 50px;
     height: 50px;

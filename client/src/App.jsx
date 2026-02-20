@@ -1396,7 +1396,7 @@ export default function App() {
                         />
                     </div>
 
-                    <div style={{ display: "flex", gap: "10px", justifyContent: "center", marginTop: "20px" }}>
+                    <div className="start-button-container">
                         <button
                             className="start-btn"
                             onClick={() => {
