@@ -18,6 +18,15 @@
     "date": "2026-02-20T10:18:59.661Z"
   },
   {
+    "name": "Test",
+    "amount": 10000000,
+    "avatar": "👤",
+    "timeTaken": 101.93499999999997,
+    "category": "mythology",
+    "lifelinesUsed": 0,
+    "date": "2026-02-20T17:31:46.627Z"
+  },
+  {
     "name": "Yash Rao",
     "amount": 5000000,
     "avatar": "🦁",
