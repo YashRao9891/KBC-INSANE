@@ -1,0 +1,354 @@
+{
+    "Q1": [
+        {
+            "question": "Which sport is Sachin Tendulkar associated with?",
+            "options": [
+                "Hockey",
+                "Cricket",
+                "Football",
+                "Badminton"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "How many players are there in a cricket team?",
+            "options": [
+                "10",
+                "11",
+                "12",
+                "9"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q2": [
+        {
+            "question": "The term 'LBW' is associated with which sport?",
+            "options": [
+                "Football",
+                "Cricket",
+                "Tennis",
+                "Hockey"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which country won the first Cricket World Cup?",
+            "options": [
+                "India",
+                "Australia",
+                "West Indies",
+                "England"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q3": [
+        {
+            "question": "In which year did India win its first Cricket World Cup?",
+            "options": [
+                "1983",
+                "2011",
+                "1992",
+                "2003"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who is known as the 'Flying Sikh'?",
+            "options": [
+                "Milkha Singh",
+                "Harbhajan Singh",
+                "Yuvraj Singh",
+                "Navjot Sindh"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q4": [
+        {
+            "question": "Which sport does P.V. Sindhu play?",
+            "options": [
+                "Tennis",
+                "Badminton",
+                "Squash",
+                "Table Tennis"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who is known as the 'God of Cricket'?",
+            "options": [
+                "Virat Kohli",
+                "M.S. Dhoni",
+                "Sachin Tendulkar",
+                "Sunil Gavaskar"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q5": [
+        {
+            "question": "The Olympics are held every how many years?",
+            "options": [
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which country hosted the 2016 Summer Olympics?",
+            "options": [
+                "China",
+                "UK",
+                "Brazil",
+                "Japan"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q6": [
+        {
+            "question": "Who was the first Indian woman to win an Olympic medal?",
+            "options": [
+                "Karnam Malleswari",
+                "P.T. Usha",
+                "Saina Nehwal",
+                "Mary Kom"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which sport is played at Wimbledon?",
+            "options": [
+                "Cricket",
+                "Tennis",
+                "Football",
+                "Golf"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q7": [
+        {
+            "question": "Who is the captain of the Indian Cricket Team (Men) as of 2024?",
+            "options": [
+                "Virat Kohli",
+                "Rohit Sharma",
+                "Hardik Pandya",
+                "KL Rahul"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "How many rings are there in the Olympic logo?",
+            "options": [
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q8": [
+        {
+            "question": "Which sport is Mary Kom associated with?",
+            "options": [
+                "Wrestling",
+                "Boxing",
+                "Weightlifting",
+                "Shooting"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who won the first gold medal for India in individual Olympics?",
+            "options": [
+                "Abhinav Bindra",
+                "Neeraj Chopra",
+                "Sushil Kumar",
+                "Vijender Singh"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q9": [
+        {
+            "question": "The term 'Checkmate' is used in?",
+            "options": [
+                "Chess",
+                "Carrom",
+                "Ludo",
+                "Monopoly"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which country is creating history in Chess currently?",
+            "options": [
+                "USA",
+                "Russia",
+                "India",
+                "China"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q10": [
+        {
+            "question": "Who is known as 'Captian Cool' in cricket?",
+            "options": [
+                "Sourav Ganguly",
+                "M.S. Dhoni",
+                "Rahul Dravid",
+                "Kapil Dev"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which stadium is the largest cricket stadium in the world?",
+            "options": [
+                "Eden Gardens",
+                "MCG",
+                "Narendra Modi Stadium",
+                "Lord's"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q11": [
+        {
+            "question": "Which sport does Neeraj Chopra associate with?",
+            "options": [
+                "Javelin Throw",
+                "Shot Put",
+                "Discus Throw",
+                "High Jump"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "In which year did India host the Commonwealth Games?",
+            "options": [
+                "2008",
+                "2010",
+                "2012",
+                "2014"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q12": [
+        {
+            "question": "Who is the 'Hockey Wizard' of India?",
+            "options": [
+                "Dhyan Chand",
+                "Balbir Singh Sr.",
+                "Dhanraj Pillay",
+                "Sardar Singh"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which country has won the most FIFA World Cups?",
+            "options": [
+                "Germany",
+                "Argentina",
+                "Brazil",
+                "France"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q13": [
+        {
+            "question": "Who was the first Indian to win an individual gold medal at Olympics?",
+            "options": [
+                "Neeraj Chopra",
+                "Abhinav Bindra",
+                "P.V. Sindhu",
+                "Sushil Kumar"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "The 'Thomas Cup' is associated with which sport?",
+            "options": [
+                "Tennis",
+                "Badminton",
+                "Table Tennis",
+                "Golf"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q14": [
+        {
+            "question": "Who is the first batsman to hit 3 double centuries in ODIs?",
+            "options": [
+                "Sachin Tendulkar",
+                "Virender Sehwag",
+                "Rohit Sharma",
+                "Virat Kohli"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which city will host the 2028 Summer Olympics?",
+            "options": [
+                "Paris",
+                "Los Angeles",
+                "Brisbane",
+                "Tokyo"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q15": [
+        {
+            "question": "Who won the 1983 Cricket World Cup for India as captain?",
+            "options": [
+                "Sunil Gavaskar",
+                "Kapil Dev",
+                "Mohinder Amarnath",
+                "Ravi Shastri"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which Indian wrestler won two Olympic medals?",
+            "options": [
+                "Sushil Kumar",
+                "Yogeshwar Dutt",
+                "Bajrang Punia",
+                "Ravi Dahiya"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q16": [
+        {
+            "question": "Viswanathan Anand is associated with which sport?",
+            "options": [
+                "Chess",
+                "Carrom",
+                "Billiards",
+                "Snooker"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who is the highest run-scorer in international cricket?",
+            "options": [
+                "Ricky Ponting",
+                "Sachin Tendulkar",
+                "Virat Kohli",
+                "Kumar Sangakkara"
+            ],
+            "correct": 2
+        }
+    ]
+}

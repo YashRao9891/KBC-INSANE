@@ -1,0 +1,440 @@
+{
+    "Q1": [
+        {
+            "question": "Who is known as the 'Shahenshah' of Bollywood?",
+            "type": "image",
+            "mediaUrl": "/assets/images/AmitabhBachchan.jpeg",
+            "options": [
+                "Shah Rukh Khan",
+                "Amitabh Bachchan",
+                "Salman Khan",
+                "Aamir Khan"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which film won the Best Picture Oscar in 2024?",
+            "options": [
+                "Oppenheimer",
+                "Barbie",
+                "Poor Things",
+                "Killers of the Flower Moon"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q2": [
+        {
+            "question": "Who played the role of 'Iron Man' in the Marvel Cinematic Universe?",
+            "options": [
+                "Chris Evans",
+                "Chris Hemsworth",
+                "Robert Downey Jr.",
+                "Mark Ruffalo"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which song won the Oscar for Best Original Song in 2023 from India?",
+            "options": [
+                "Jai Ho",
+                "Naatu Naatu",
+                "Vande Mataram",
+                "Chak De India"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q3": [
+        {
+            "question": "Who directed the movie 'Baahubali'?",
+            "options": [
+                "S.S. Rajamouli",
+                "Sanjay Leela Bhansali",
+                "Karan Johar",
+                "Rohit Shetty"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which character does Johnny Depp play in 'Pirates of the Caribbean'?",
+            "options": [
+                "Will Turner",
+                "Jack Sparrow",
+                "Barbossa",
+                "Davy Jones"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q4": [
+        {
+            "question": "Who is this famous wizard?",
+            "type": "image",
+            "mediaUrl": "/assets/images/HarryPotter.jpeg",
+            "options": [
+                "Ron Weasley",
+                "Harry Potter",
+                "Draco Malfoy",
+                "Neville Longbottom"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Identify these animated characters.",
+            "type": "image",
+            "mediaUrl": "/assets/images/Minions.jpeg",
+            "options": [
+                "Smurfs",
+                "Minions",
+                "Teletubbies",
+                "Pokemon"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who is the 'King Khan' of Bollywood?",
+            "options": [
+                "Salman Khan",
+                "Aamir Khan",
+                "Shah Rukh Khan",
+                "Saif Ali Khan"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which movie features the character 'Harry Potter'?",
+            "options": [
+                "Lord of the Rings",
+                "Harry Potter",
+                "Percy Jackson",
+                "Narnia"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q5": [
+        {
+            "question": "Who is the music composer for 'Slumdog Millionaire'?",
+            "options": [
+                "A.R. Rahman",
+                "Pritam",
+                "Vishal-Shekhar",
+                "Shankar-Ehsaan-Loy"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which is the highest-grossing movie of all time (Global)?",
+            "options": [
+                "Titanic",
+                "Avatar",
+                "Avengers: Endgame",
+                "Star Wars"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q6": [
+        {
+            "question": "Who played 'Gabbar Singh' in Sholay?",
+            "options": [
+                "Pran",
+                "Amjad Khan",
+                "Amrish Puri",
+                "Prem Chopra"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which Indian actor starred in the Hollywood movie 'xXx: Return of Xander Cage'?",
+            "options": [
+                "Priyanka Chopra",
+                "Deepika Padukone",
+                "Aishwarya Rai",
+                "Katrina Kaif"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q7": [
+        {
+            "question": "Who is the host of 'Kaun Banega Crorepati'?",
+            "options": [
+                "Shah Rukh Khan",
+                "Amitabh Bachchan",
+                "Aamir Khan",
+                "Salman Khan"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which sitcom features characters named Ross, Rachel, and Chandler?",
+            "options": [
+                "How I Met Your Mother",
+                "The Big Bang Theory",
+                "Friends",
+                "The Office"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q8": [
+        {
+            "question": "Who directed 'Dilwale Dulhania Le Jayenge'?",
+            "options": [
+                "Yash Chopra",
+                "Aditya Chopra",
+                "Karan Johar",
+                "Sooraj Barjatya"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the name of the fictional country in 'Black Panther'?",
+            "options": [
+                "Wakanda",
+                "Zamunda",
+                "Genosha",
+                "Latveria"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q9": [
+        {
+            "question": "Which movie is this iconic scene from?",
+            "type": "video",
+            "mediaUrl": "/assets/video/Titanic.mp4",
+            "options": [
+                "Avatar",
+                "Titanic",
+                "The Notebook",
+                "Romeo + Juliet"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who is known as the 'Nightingale of India' in singing?",
+            "options": [
+                "Asha Bhosle",
+                "Lata Mangeshkar",
+                "Shreya Ghoshal",
+                "Sunidhi Chauhan"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which actor plays 'Mission Impossible' agent Ethan Hunt?",
+            "options": [
+                "Brad Pitt",
+                "Tom Cruise",
+                "Keanu Reeves",
+                "Matt Damon"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q10": [
+        {
+            "question": "Which movie was India's first sound film?",
+            "options": [
+                "Raja Harishchandra",
+                "Alam Ara",
+                "Kisan Kanya",
+                "Mother India"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who wrote the 'Game of Thrones' book series?",
+            "options": [
+                "J.R.R. Tolkien",
+                "George R.R. Martin",
+                "J.K. Rowling",
+                "Stephen King"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q11": [
+        {
+            "question": "Which South Indian movie song became a global viral hit in 2024?",
+            "options": [
+                "Kaavaalaa",
+                "Illuminati",
+                "Manasilaayo",
+                "Ordinary Person"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who played 'Joker' in the 2019 movie 'Joker'?",
+            "options": [
+                "Heath Ledger",
+                "Joaquin Phoenix",
+                "Jared Leto",
+                "Jack Nicholson"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q12": [
+        {
+            "question": "Who directed 'Oppenheimer'?",
+            "options": [
+                "Steven Spielberg",
+                "Christopher Nolan",
+                "Martin Scorsese",
+                "James Cameron"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who is the 'Thalaiva' of Tamil Cinema?",
+            "options": [
+                "Kamal Haasan",
+                "Rajinikanth",
+                "Vijay",
+                "Ajith"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q13": [
+        {
+            "question": "Which actor played this version of The Joker?",
+            "type": "image",
+            "mediaUrl": "/assets/images/HeathLedgersJoker.jpeg",
+            "options": [
+                "Jared Leto",
+                "Joaquin Phoenix",
+                "Heath Ledger",
+                "Jack Nicholson"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Identify this classic movie.",
+            "type": "image",
+            "mediaUrl": "/assets/images/TheGodfather.jpeg",
+            "options": [
+                "Scarface",
+                "Goodfellas",
+                "The Godfather",
+                "Pulp Fiction"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which actor is known as 'Bhaijaan'?",
+            "options": [
+                "Shah Rukh Khan",
+                "Aamir Khan",
+                "Salman Khan",
+                "Saif Ali Khan"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "What is the name of Batman's butler?",
+            "options": [
+                "Alfred",
+                "Jarvis",
+                "Jeeves",
+                "Geoffrey"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q14": [
+        {
+            "question": "Who won the National Award for Best Actor for 'Pushpa'?",
+            "options": [
+                "Allu Arjun",
+                "Ram Charan",
+                "NTR Jr.",
+                "Mahesh Babu"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who is the creator of 'Star Wars'?",
+            "options": [
+                "George Lucas",
+                "Steven Spielberg",
+                "J.J. Abrams",
+                "James Cameron"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q15": [
+        {
+            "question": "Which Indian movie was nominated for Best Foreign Language Film at Oscars 2001?",
+            "options": [
+                "Lagaan",
+                "Devdas",
+                "Rang De Basanti",
+                "Barfi"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who voiced 'Genie' in the original animated 'Aladdin'?",
+            "options": [
+                "Robin Williams",
+                "Will Smith",
+                "Eddie Murphy",
+                "Jim Carrey"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q16": [
+        {
+            "question": "Who is this legendary filmmaker?",
+            "type": "image",
+            "mediaUrl": "/assets/images/SatyajitRay.jpeg",
+            "options": [
+                "Ritwik Ghatak",
+                "Satyajit Ray",
+                "Guru Dutt",
+                "Bimal Roy"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Identify this Indian classical dance form.",
+            "type": "video",
+            "mediaUrl": "/assets/videos/Kathakali.mp4",
+            "options": [
+                "Bharatanatyam",
+                "Kathak",
+                "Kathakali",
+                "Odissi"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Who directed '3 Idiots'?",
+            "options": [
+                "Rajkumar Hirani",
+                "Anurag Kashyap",
+                "Karan Johar",
+                "Farhan Akhtar"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which actor plays 'Deadpool'?",
+            "options": [
+                "Hugh Jackman",
+                "Ryan Reynolds",
+                "Chris Pratt",
+                "Paul Rudd"
+            ],
+            "correct": 2
+        }
+    ]
+}

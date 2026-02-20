@@ -1,0 +1,402 @@
+{
+    "Q1": [
+        {
+            "question": "Which planet is shown in this video?",
+            "type": "video",
+            "mediaUrl": "/assets/video/Jupiter.mp4",
+            "options": [
+                "Mars",
+                "Venus",
+                "Jupiter",
+                "Saturn"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which planet is known as the Red Planet?",
+            "options": [
+                "Venus",
+                "Mars",
+                "Jupiter",
+                "Saturn"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q2": [
+        {
+            "question": "Which planet is the 3rd from the Sun?",
+            "options": [
+                "Venus",
+                "Earth",
+                "Mars",
+                "Jupiter"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Identify this lab equipment.",
+            "type": "image",
+            "mediaUrl": "/assets/images/Microscope.jpeg",
+            "options": [
+                "Telescope",
+                "Periscope",
+                "Microscope",
+                "Stethoscope"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "What is the hardest natural substance on Earth?",
+            "options": [
+                "Gold",
+                "Iron",
+                "Diamond",
+                "Platinum"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which gas do plants absorb from the atmosphere?",
+            "options": [
+                "Oxygen",
+                "Carbon Dioxide",
+                "Nitrogen",
+                "Hydrogen"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q3": [
+        {
+            "question": "Who discovered gravity?",
+            "options": [
+                "Albert Einstein",
+                "Isaac Newton",
+                "Galileo Galilei",
+                "Nikola Tesla"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the powerhouse of the cell?",
+            "options": [
+                "Nucleus",
+                "Mitochondria",
+                "Ribosome",
+                "Golgi Body"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q4": [
+        {
+            "question": "What is the boiling point of water?",
+            "options": [
+                "50°C",
+                "100°C",
+                "150°C",
+                "200°C"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which organ pumps blood in the human body?",
+            "options": [
+                "Lungs",
+                "Brain",
+                "Heart",
+                "Kidney"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q5": [
+        {
+            "question": "Which vitamin is obtained from sunlight?",
+            "options": [
+                "Vitamin A",
+                "Vitamin C",
+                "Vitamin D",
+                "Vitamin B"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "What is the nearest star to Earth?",
+            "options": [
+                "Proxima Centauri",
+                "Sirius",
+                "Sun",
+                "Alpha Centauri"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q6": [
+        {
+            "question": "Who invented the telephone?",
+            "options": [
+                "Thomas Edison",
+                "Alexander Graham Bell",
+                "Guglielmo Marconi",
+                "Nikola Tesla"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the chemical formula for salt?",
+            "options": [
+                "NaCl",
+                "KCl",
+                "HCl",
+                "NaOH"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q7": [
+        {
+            "question": "Which gas is most abundant in the Earth's atmosphere?",
+            "options": [
+                "Oxygen",
+                "Carbon Dioxide",
+                "Nitrogen",
+                "Argon"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "How many bones are there in the adult human body?",
+            "options": [
+                "200",
+                "206",
+                "212",
+                "208"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q8": [
+        {
+            "question": "Which organ system is displayed?",
+            "type": "image",
+            "mediaUrl": "/assets/images/DigestiveSystem.jpeg",
+            "options": [
+                "Respiratory",
+                "Circulatory",
+                "Digestive",
+                "Nervous"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "What is the speed of light approx?",
+            "options": [
+                "300,000 km/s",
+                "150,000 km/s",
+                "1,000 km/s",
+                "30,000 km/s"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which element has the atomic number 1?",
+            "options": [
+                "Helium",
+                "Hydrogen",
+                "Lithium",
+                "Carbon"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q9": [
+        {
+            "question": "Who is known as the father of Indian Space Program?",
+            "options": [
+                "C.V. Raman",
+                "Vikram Sarabhai",
+                "A.P.J. Abdul Kalam",
+                "Homi Bhabha"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which planet is the largest in our solar system?",
+            "options": [
+                "Saturn",
+                "Jupiter",
+                "Neptune",
+                "Uranus"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q10": [
+        {
+            "question": "What is the study of plants called?",
+            "options": [
+                "Zoology",
+                "Botany",
+                "Geology",
+                "Ecology"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which metal is liquid at room temperature?",
+            "options": [
+                "Gold",
+                "Silver",
+                "Mercury",
+                "Copper"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q11": [
+        {
+            "question": "Who proposed the Theory of Relativity?",
+            "options": [
+                "Isaac Newton",
+                "Albert Einstein",
+                "Stephen Hawking",
+                "Niels Bohr"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the main constituent of biogas?",
+            "options": [
+                "Methane",
+                "Butane",
+                "Propane",
+                "Ethane"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q12": [
+        {
+            "question": "Who discovered the structure of this molecule?",
+            "type": "image",
+            "mediaUrl": "/assets/images/DNA.jpeg",
+            "options": [
+                "Watson and Crick",
+                "Darwin",
+                "Mendel",
+                "Pasteur"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which blood group is known as the universal donor?",
+            "options": [
+                "A",
+                "B",
+                "AB",
+                "O"
+            ],
+            "correct": 4
+        },
+        {
+            "question": "What is the unit of electric current?",
+            "options": [
+                "Volt",
+                "Watt",
+                "Ampere",
+                "Ohm"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q13": [
+        {
+            "question": "Which instrument is used to measure earthquakes?",
+            "options": [
+                "Barometer",
+                "Seismograph",
+                "Thermometer",
+                "Hygrometer"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who discovered Penicillin?",
+            "options": [
+                "Alexander Fleming",
+                "Louis Pasteur",
+                "Edward Jenner",
+                "Robert Koch"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q14": [
+        {
+            "question": "What is the hardest tissue in the human body?",
+            "options": [
+                "Bone",
+                "Enamel",
+                "Cartilage",
+                "Muscle"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which gas is used in electric bulbs?",
+            "options": [
+                "Oxygen",
+                "Hydrogen",
+                "Nitrogen",
+                "Argon"
+            ],
+            "correct": 4
+        }
+    ],
+    "Q15": [
+        {
+            "question": "What is the pH value of pure water?",
+            "options": [
+                "5",
+                "6",
+                "7",
+                "8"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which planet spins clockwise?",
+            "options": [
+                "Mars",
+                "Venus",
+                "Jupiter",
+                "Earth"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q16": [
+        {
+            "question": "Who is known as the 'Missile Man of India'?",
+            "options": [
+                "Vikram Sarabhai",
+                "A.P.J. Abdul Kalam",
+                "Homi Bhabha",
+                "Satish Dhawan"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which is the lightest gas?",
+            "options": [
+                "Oxygen",
+                "Nitrogen",
+                "Hydrogen",
+                "Helium"
+            ],
+            "correct": 3
+        }
+    ]
+}

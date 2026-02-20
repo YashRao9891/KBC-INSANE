@@ -1,0 +1,356 @@
+{
+    "Q1": [
+        {
+            "question": "Identify this historical monument located in Agra, India.",
+            "type": "image",
+            "mediaUrl": "/assets/images/TajMahal.jpeg",
+            "options": [
+                "Qutub Minar",
+                "Red Fort",
+                "Taj Mahal",
+                "India Gate"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which empire built the Taj Mahal?",
+            "options": [
+                "Gupta",
+                "Maurya",
+                "Mughal",
+                "Chola"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q2": [
+        {
+            "question": "Who is known as the 'Father of the Nation' in India?",
+            "options": [
+                "Subhash Chandra Bose",
+                "Bhagat Singh",
+                "Mahatma Gandhi",
+                "Sardar Patel"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "In which year did India gain independence?",
+            "options": [
+                "1945",
+                "1947",
+                "1950",
+                "1942"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q3": [
+        {
+            "question": "Which Indian freedom fighter was known as 'Netaji'?",
+            "options": [
+                "Bhagat Singh",
+                "Subhash Chandra Bose",
+                "Chandrashekhar Azad",
+                "Lala Lajpat Rai"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who wrote 'Discovery of India'?",
+            "options": [
+                "Mahatma Gandhi",
+                "Jawaharlal Nehru",
+                "Rabindranath Tagore",
+                "B.R. Ambedkar"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q4": [
+        {
+            "question": "The Battle of Plassey was fought in which year?",
+            "options": [
+                "1757",
+                "1857",
+                "1761",
+                "1764"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who was the first woman Prime Minister of India?",
+            "options": [
+                "Sarojini Naidu",
+                "Indira Gandhi",
+                "Pratibha Patil",
+                "Sushma Swaraj"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q5": [
+        {
+            "question": "Who founded the Maurya Empire?",
+            "options": [
+                "Ashoka",
+                "Chandragupta Maurya",
+                "Bindusara",
+                "Bimbisara"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which Mughal emperor was known as 'Alamgir'?",
+            "options": [
+                "Akbar",
+                "Aurangzeb",
+                "Shah Jahan",
+                "Jahangir"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q6": [
+        {
+            "question": "Who was the last Viceroy of India?",
+            "options": [
+                "Lord Curzon",
+                "Lord Mountbatten",
+                "Lord Canning",
+                "Lord Dalhousie"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which movement was started by Gandhi in 1942?",
+            "options": [
+                "Non-Cooperation",
+                "Civil Disobedience",
+                "Quit India",
+                "Khilafat"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q7": [
+        {
+            "question": "Who was the first President of India?",
+            "options": [
+                "Jawaharlal Nehru",
+                "Dr. Rajendra Prasad",
+                "S. Radhakrishnan",
+                "Zakir Hussain"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "The 'Jallianwala Bagh' massacre took place in which city?",
+            "options": [
+                "Lahore",
+                "Amritsar",
+                "Chandigarh",
+                "Jalandhar"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q8": [
+        {
+            "question": "Who wrote the Indian National Anthem?",
+            "options": [
+                "Bankim Chandra Chatterjee",
+                "Rabindranath Tagore",
+                "Sarojini Naidu",
+                "Subhash Chandra Bose"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which king gave up war after the Battle of Kalinga?",
+            "options": [
+                "Chandragupta",
+                "Akbar",
+                "Ashoka",
+                "Harsha"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q9": [
+        {
+            "question": "Comparison of 'Indika' was written by which Greek traveler?",
+            "options": [
+                "Megasthenes",
+                "Fahien",
+                "Hiuen Tsang",
+                "Al-Biruni"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who was the founder of the Gupta Empire?",
+            "options": [
+                "Chandragupta I",
+                "Srigupta",
+                "Samudragupta",
+                "Ghatotkacha"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q10": [
+        {
+            "question": "In which year did the First Battle of Panipat take place?",
+            "options": [
+                "1526",
+                "1556",
+                "1761",
+                "1576"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who was the first Indian woman President of the Indian National Congress?",
+            "options": [
+                "Annie Besant",
+                "Sarojini Naidu",
+                "Indira Gandhi",
+                "Sucheta Kripalani"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q11": [
+        {
+            "question": "Who established the 'Arya Samaj'?",
+            "options": [
+                "Raja Ram Mohan Roy",
+                "Swami Dayanand Saraswati",
+                "Swami Vivekananda",
+                "Ishwar Chandra Vidyasagar"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which Act of British India was known as the 'Black Act'?",
+            "options": [
+                "Rowlatt Act",
+                "Pitt's India Act",
+                "Regulating Act",
+                "Ilbert Bill"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q12": [
+        {
+            "question": "Who was the only Indian Governor-General of India?",
+            "options": [
+                "C. Rajagopalachari",
+                "Dr. Rajendra Prasad",
+                "S. Radhakrishnan",
+                "V.V. Giri"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "The ruins of the Harappan civilization were first discovered at?",
+            "options": [
+                "Mohenjo-daro",
+                "Harappa",
+                "Lothal",
+                "Kalibangan"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q13": [
+        {
+            "question": "Who was known as the 'Iron Man of India'?",
+            "options": [
+                "Jawaharlal Nehru",
+                "Sardar Vallabhbhai Patel",
+                "Subhash Chandra Bose",
+                "Lal Bahadur Shastri"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which Mughal Emperor built the Red Fort in Delhi?",
+            "options": [
+                "Akbar",
+                "Jahangir",
+                "Shah Jahan",
+                "Aurangzeb"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q14": [
+        {
+            "question": "The 'Doctrine of Lapse' was introduced by?",
+            "options": [
+                "Lord Wellesley",
+                "Lord Dalhousie",
+                "Lord Curzon",
+                "Lord Hastings"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who was the court poet of Harsha?",
+            "options": [
+                "Banabhatta",
+                "Kalidasa",
+                "Bhavabhuti",
+                "Harisena"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q15": [
+        {
+            "question": "Which battle marked the end of the Vijayanagara Empire?",
+            "options": [
+                "Battle of Talikota",
+                "Battle of Panipat",
+                "Battle of Plassey",
+                "Battle of Buxar"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who founded the 'Servants of India Society'?",
+            "options": [
+                "Gopal Krishna Gokhale",
+                "Bal Gangadhar Tilak",
+                "Dadabhai Naoroji",
+                "M.G. Ranade"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q16": [
+        {
+            "question": "The 'Sepoy Mutiny' of 1857 started in which city?",
+            "options": [
+                "Dellhi",
+                "Meerut",
+                "Kanpur",
+                "Lucknow"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who was the first Muslim President of the Indian National Congress?",
+            "options": [
+                "Badruddin Tyabji",
+                "Maulana Abul Kalam Azad",
+                "Rahimtulla M. Sayani",
+                "Hakim Ajmal Khan"
+            ],
+            "correct": 1
+        }
+    ]
+}

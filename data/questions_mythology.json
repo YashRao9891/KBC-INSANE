@@ -1,0 +1,584 @@
+{
+    "Q1": [
+        {
+            "question": "Who is the central protagonist of the Ramayana?",
+            "options": [
+                "Krishna",
+                "Rama",
+                "Arjuna",
+                "Shiva"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "In the Mahabharata, who was the eldest Pandava brother?",
+            "options": [
+                "Bhima",
+                "Arjuna",
+                "Yudhishthira",
+                "Nakula"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Who is known as the wife of Lord Rama?",
+            "options": [
+                "Sita",
+                "Radha",
+                "Draupadi",
+                "Parvati"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who is the father of Lord Ganesha?",
+            "options": [
+                "Vishnu",
+                "Shiva",
+                "Brahma",
+                "Indra"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which epic features the battle of Kurukshetra?",
+            "options": [
+                "Ramayana",
+                "Mahabharata",
+                "Bhagavatam",
+                "Vedas"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who is the monkey god devoted to Lord Rama?",
+            "options": [
+                "Hanuman",
+                "Sugriva",
+                "Bali",
+                "Jambavan"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q2": [
+        {
+            "question": "Which bow did Lord Rama break to win Sita's hand in marriage?",
+            "options": [
+                "Gandiva",
+                "Pinaka",
+                "Sharanga",
+                "Vijaya"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who wrote the Mahabharata?",
+            "options": [
+                "Valmiki",
+                "Veda Vyasa",
+                "Tulsidas",
+                "Kalidasa"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who killed Ravana?",
+            "options": [
+                "Lakshmana",
+                "Hanuman",
+                "Rama",
+                "Bharata"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Who was the charioteer of Arjuna in Mahabharata?",
+            "options": [
+                "Bhishma",
+                "Krishna",
+                "Karna",
+                "Drona"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the name of Lord Shiva’s trident?",
+            "options": [
+                "Sudarshan",
+                "Vajra",
+                "Trishul",
+                "Pashupatastra"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Who is the mother of the Pandavas?",
+            "options": [
+                "Kunti",
+                "Gandhari",
+                "Draupadi",
+                "Subhadra"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q3": [
+        {
+            "question": "What was the name of Ravana's flying chariot?",
+            "options": [
+                "Pushpaka Vimana",
+                "Garuda",
+                "Nandi",
+                "Airavata"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who was the mother of the Kauravas in the Mahabharata?",
+            "options": [
+                "Kunti",
+                "Madri",
+                "Gandhari",
+                "Satyavati"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Who broke Shiva’s bow to marry Sita?",
+            "options": [
+                "Rama",
+                "Lakshmana",
+                "Parashurama",
+                "Janaka"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What was Karna’s birth name?",
+            "options": [
+                "Radheya",
+                "Vasusena",
+                "Suryaputra",
+                "Angaraja"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which demon king was Hiranyakashipu’s son?",
+            "options": [
+                "Ravana",
+                "Prahlada",
+                "Bali",
+                "Meghanada"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who cursed Karna that he would forget his knowledge in battle?",
+            "options": [
+                "Drona",
+                "Krishna",
+                "Parashurama",
+                "Indra"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q4": [
+        {
+            "question": "Which brother of Ravana defected to Rama's side?",
+            "options": [
+                "Kumbhakarna",
+                "Vibhishana",
+                "Indrajit",
+                "Maricha"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the name of the holy scripture spoken by Krishna to Arjuna?",
+            "options": [
+                "Vedas",
+                "Upanishads",
+                "Bhagavad Gita",
+                "Ramcharitmanas"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q5": [
+        {
+            "question": "Who was the monkey king who helped Rama fight Ravana?",
+            "options": [
+                "Vali",
+                "Angada",
+                "Sugriva",
+                "Hanuman"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "In the Mahabharata, who vowed to wash her hair with Dushasana's blood?",
+            "options": [
+                "Kunti",
+                "Gandhari",
+                "Draupadi",
+                "Subhadra"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which weapon did Lord Vishnu use to kill Shishupala?",
+            "options": [
+                "Trishul",
+                "Sudarshan Chakra",
+                "Brahmastra",
+                "Vajra"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who was the only Kaurava to survive the Kurukshetra war?",
+            "options": [
+                "Duryodhana",
+                "Ashwatthama",
+                "Yuyutsu",
+                "Shakuni"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Who wrote the Mahabharata?",
+            "options": [
+                "Valmiki",
+                "Ved Vyasa",
+                "Tulsidas",
+                "Narada"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q6": [
+        {
+            "question": "What was the name of the forest where Rama, Sita, and Lakshmana spent their exile?",
+            "options": [
+                "Dandakaranya",
+                "Naimisharanya",
+                "Ashok Vatika",
+                "Panchavati"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Who provided the unexhaustible vessel 'Akshaya Patra' to the Pandavas?",
+            "options": [
+                "Lord Shiva",
+                "Lord Krishna",
+                "Surya Dev",
+                "Agni Dev"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q7": [
+        {
+            "question": "Who was the father of Sita?",
+            "options": [
+                "Dasharatha",
+                "Janaka",
+                "Vishwamitra",
+                "Vashistha"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which warrior in the Mahabharata had the boon of 'Ichha Mrityu' (death at will)?",
+            "options": [
+                "Drona",
+                "Karna",
+                "Bhishma",
+                "Ashwatthama"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q8": [
+        {
+            "question": "Who turned into a golden deer to distract Rama?",
+            "options": [
+                "Subahu",
+                "Maricha",
+                "Khara",
+                "Dushana"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who was the teacher of both the Pandavas and the Kauravas?",
+            "options": [
+                "Kripacharya",
+                "Dronacharya",
+                "Parashurama",
+                "Sandipani"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q9": [
+        {
+            "question": "According to the Ramayana, who was the mother of Bharata?",
+            "options": [
+                "Kaushalya",
+                "Sumitra",
+                "Kaikeyi",
+                "Mandodari"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which weapon did Karna use to kill Ghatotkacha?",
+            "options": [
+                "Brahmastra",
+                "Vasavi Shakti",
+                "Narayanastra",
+                "Pashupatastra"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q10": [
+        {
+            "question": "Currently, how many years did Rama spend in exile?",
+            "options": [
+                "12",
+                "13",
+                "14",
+                "15"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Who was the only sister of the Kauravas?",
+            "options": [
+                "Hidimba",
+                "Dushala",
+                "Ulupi",
+                "Chitrangada"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which incarnation of Vishnu killed the demon Madhu and Kaitabha?",
+            "options": [
+                "Narasimha",
+                "Matsya",
+                "Hayagriva",
+                "Kurma"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "What was the name of Arjuna’s bow?",
+            "options": [
+                "Pinaka",
+                "Gandiva",
+                "Sharanga",
+                "Kodanda"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who was the guru of both Pandavas and Kauravas?",
+            "options": [
+                "Kripacharya",
+                "Dronacharya",
+                "Parashurama",
+                "Bhishma"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q11": [
+        {
+            "question": "In the Ramayana, who wrote the 'Ramcharitmanas'?",
+            "options": [
+                "Valmiki",
+                "Tulsidas",
+                "Ved Vyas",
+                "Kabir"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who was the real father of Pandu?",
+            "options": [
+                "Shantanu",
+                "Vichitravirya",
+                "Veda Vyasa",
+                "Bhishma"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q12": [
+        {
+            "question": "What was the name of the bird who fought Ravana to save Sita?",
+            "options": [
+                "Sampati",
+                "Jatayu",
+                "Garuda",
+                "Krauncha"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What was the real name of Draupadi?",
+            "options": [
+                "Panchali",
+                "Yagnaseni",
+                "Krishnaa",
+                "Madri"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q13": [
+        {
+            "question": "Who cursed Ravana that he would die if he forced himself on a woman?",
+            "options": [
+                "Rambha",
+                "Nalakubara",
+                "Vedavati",
+                "Parvati"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who was the charioteer of Karna?",
+            "options": [
+                "Sanjaya",
+                "Shalya",
+                "Kripa",
+                "Vidura"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q14": [
+        {
+            "question": "Which sage gave the 'Adityahridayam' mantra to Rama during the war?",
+            "options": [
+                "Vashistha",
+                "Vishwamitra",
+                "Agastya",
+                "Atri"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Who killed the demon Bakasura in the Mahabharata?",
+            "options": [
+                "Arjuna",
+                "Bhima",
+                "Krishna",
+                "Balarama"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q15": [
+        {
+            "question": "In the Ramayana, what was the name of Indrajit's wife?",
+            "options": [
+                "Sulochana",
+                "Mandodari",
+                "Trijata",
+                "Rumā"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "How many Akshauhinis of army did the Kauravas have?",
+            "options": [
+                "7",
+                "11",
+                "18",
+                "9"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which asura performed severe penance and received a boon from Brahma that made him nearly invincible, later killed by Narasimha?",
+            "options": [
+                "Hiranyaksha",
+                "Hiranyakashipu",
+                "Bali",
+                "Vritra"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Who killed Abhimanyu in the Chakravyuha?",
+            "options": [
+                "Karna",
+                "Drona",
+                "Jayadratha",
+                "Collectively by Kaurava warriors"
+            ],
+            "correct": 4
+        },
+        {
+            "question": "Which king was turned into a woman due to a curse and later became the father of Pururavas?",
+            "options": [
+                "Yayati",
+                "Ila",
+                "Nahusha",
+                "Bharata"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q16": [
+        {
+            "question": "Who is considered the sixth incarnation (Avatar) of Lord Vishnu, who appeared in both Ramayana and Mahabharata?",
+            "options": [
+                "Vamana",
+                "Parashurama",
+                "Krishna",
+                "Balarama"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What was the name of the snake sacrifice performed by Janamejaya?",
+            "options": [
+                "Ashwamedha Yajna",
+                "Rajarshuya Yajna",
+                "Sarpa Satra",
+                "Putrakameshti Yajna"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which sage narrated the Ramayana to Lava and Kusha?",
+            "options": [
+                "Vishwamitra",
+                "Narada",
+                "Valmiki",
+                "Agastya"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which Purana primarily describes the story of Lord Krishna?",
+            "options": [
+                "Shiva Purana",
+                "Vishnu Purana",
+                "Bhagavata Purana",
+                "Markandeya Purana"
+            ],
+            "correct": 3
+        }
+    ]
+}

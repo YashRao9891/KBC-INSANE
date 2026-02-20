@@ -1,0 +1,354 @@
+{
+    "Q1": [
+        {
+            "question": "Which is the largest country in the world by area?",
+            "options": [
+                "India",
+                "USA",
+                "China",
+                "Russia"
+            ],
+            "correct": 4
+        },
+        {
+            "question": "What is the capital of India?",
+            "options": [
+                "Mumbai",
+                "New Delhi",
+                "Kolkata",
+                "Chennai"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q2": [
+        {
+            "question": "Which is the longest river in the world?",
+            "options": [
+                "Amazon",
+                "Nile",
+                "Yangtze",
+                "Mississippi"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which city is known as the 'Pink City'?",
+            "options": [
+                "Jodhpur",
+                "Udaipur",
+                "Jaipur",
+                "Jaisalmer"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q3": [
+        {
+            "question": "Which is the smallest state in India?",
+            "options": [
+                "Sikkim",
+                "Goa",
+                "Tripura",
+                "Manipur"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Mount Everest is located in which country?",
+            "options": [
+                "India",
+                "China",
+                "Nepal",
+                "Bhutan"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q4": [
+        {
+            "question": "Which is the largest continent?",
+            "options": [
+                "Africa",
+                "Asia",
+                "North America",
+                "Europe"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which planet is known as the Blue Planet?",
+            "options": [
+                "Mars",
+                "Earth",
+                "Neptune",
+                "Uranus"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q5": [
+        {
+            "question": "Which river is known as the 'Ganga of the South'?",
+            "options": [
+                "Krishna",
+                "Godavari",
+                "Cauvery",
+                "Narmada"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "What is the currency of Japan?",
+            "options": [
+                "Yuan",
+                "Yen",
+                "Won",
+                "Baht"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q6": [
+        {
+            "question": "Which is the largest desert in the world?",
+            "options": [
+                "Sahara",
+                "Gobi",
+                "Arabian",
+                "Antarctic"
+            ],
+            "correct": 4
+        },
+        {
+            "question": "Which state is known as the 'Spice Garden of India'?",
+            "options": [
+                "Kerala",
+                "Karnataka",
+                "Tamil Nadu",
+                "Andhra Pradesh"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q7": [
+        {
+            "question": "Which fictional line divides India and Pakistan?",
+            "options": [
+                "McMahon Line",
+                "Durand Line",
+                "Radcliffe Line",
+                "Palk Strait"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "What is the capital of Australia?",
+            "options": [
+                "Sydney",
+                "Melbourne",
+                "Canberra",
+                "Perth"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q8": [
+        {
+            "question": "Which country is known as the 'Land of the Rising Sun'?",
+            "options": [
+                "China",
+                "Japan",
+                "South Korea",
+                "Thailand"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which is the highest peak in India?",
+            "options": [
+                "K2",
+                "Kangchenjunga",
+                "Nanda Devi",
+                "Mount Everest"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q9": [
+        {
+            "question": "The Suez Canal connects which two seas?",
+            "options": [
+                "Red Sea & Mediterranean",
+                "Red Sea & Arabian Sea",
+                "Black Sea & Mediterranean",
+                "Atlantic & Pacific"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which city is situated on the banks of River Yamuna?",
+            "options": [
+                "Varanasi",
+                "Kanpur",
+                "Agra",
+                "Haridwar"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q10": [
+        {
+            "question": "Which is the largest fresh water lake in the world?",
+            "options": [
+                "Lake Superior",
+                "Lake Baikal",
+                "Lake Victoria",
+                "Caspian Sea"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which Indian state has the longest coastline?",
+            "options": [
+                "Maharashtra",
+                "Tamil Nadu",
+                "Gujarat",
+                "Andhra Pradesh"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q11": [
+        {
+            "question": "Which country has the most time zones?",
+            "options": [
+                "Russia",
+                "USA",
+                "France",
+                "China"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "What is the capital of Canada?",
+            "options": [
+                "Toronto",
+                "Vancouver",
+                "Ottawa",
+                "Montreal"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q12": [
+        {
+            "question": "Which is the largest ocean in the world?",
+            "options": [
+                "Atlantic",
+                "Indian",
+                "Arctic",
+                "Pacific"
+            ],
+            "correct": 4
+        },
+        {
+            "question": "Which city is known as 'The City of Joy'?",
+            "options": [
+                "Mumbai",
+                "Chennai",
+                "Kolkata",
+                "Delhi"
+            ],
+            "correct": 3
+        }
+    ],
+    "Q13": [
+        {
+            "question": "Which river flows through the Grand Canyon?",
+            "options": [
+                "Mississippi",
+                "Colorado",
+                "Amazon",
+                "Nile"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "Which is the smallest continent?",
+            "options": [
+                "Europe",
+                "Australia",
+                "Antarctica",
+                "South America"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q14": [
+        {
+            "question": "Where is the Headquarter of UN?",
+            "options": [
+                "Geneva",
+                "London",
+                "New York",
+                "Paris"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which pass connects Srinagar to Leh?",
+            "options": [
+                "Zoji La",
+                "Nathula",
+                "Rohtang",
+                "Shipki La"
+            ],
+            "correct": 1
+        }
+    ],
+    "Q15": [
+        {
+            "question": "Which country is known as the 'Sugar Bowl of the World'?",
+            "options": [
+                "India",
+                "Brazil",
+                "Cuba",
+                "USA"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which is the southernmost point of India?",
+            "options": [
+                "Kanyakumari",
+                "Indira Point",
+                "Rameswaram",
+                "Tuticorin"
+            ],
+            "correct": 2
+        }
+    ],
+    "Q16": [
+        {
+            "question": "The Great Barrier Reef is located in?",
+            "options": [
+                "India",
+                "USA",
+                "Australia",
+                "South Africa"
+            ],
+            "correct": 3
+        },
+        {
+            "question": "Which river is known as 'Sorrow of Bihar'?",
+            "options": [
+                "Ganga",
+                "Kosi",
+                "Gandak",
+                "Son"
+            ],
+            "correct": 2
+        }
+    ]
+}

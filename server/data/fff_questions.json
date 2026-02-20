@@ -1,0 +1,463 @@
+{
+    "fffQuestions": [
+        {
+            "question": "Arrange these events in chronological order (Earliest to Latest)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "India's Independence"
+                },
+                {
+                    "id": "B",
+                    "text": "Battle of Plassey"
+                },
+                {
+                    "id": "C",
+                    "text": "First War of Independence"
+                },
+                {
+                    "id": "D",
+                    "text": "Quit India Movement"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "C",
+                "D",
+                "A"
+            ]
+        },
+        {
+            "question": "Arrange these Mughal Emperors in chronological order of their reign",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Akbar"
+                },
+                {
+                    "id": "B",
+                    "text": "Babur"
+                },
+                {
+                    "id": "C",
+                    "text": "Shah Jahan"
+                },
+                {
+                    "id": "D",
+                    "text": "Aurangzeb"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "A",
+                "C",
+                "D"
+            ]
+        },
+        {
+            "question": "Arrange these civilizations from Oldest to Newest",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Roman Empire"
+                },
+                {
+                    "id": "B",
+                    "text": "Indus Valley Civilization"
+                },
+                {
+                    "id": "C",
+                    "text": "Maya Civilization"
+                },
+                {
+                    "id": "D",
+                    "text": "Modern Internet Age"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "A",
+                "C",
+                "D"
+            ]
+        },
+        {
+            "question": "Arrange these Indian Prime Ministers in order of their first term",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Indira Gandhi"
+                },
+                {
+                    "id": "B",
+                    "text": "Jawaharlal Nehru"
+                },
+                {
+                    "id": "C",
+                    "text": "Atal Bihari Vajpayee"
+                },
+                {
+                    "id": "D",
+                    "text": "Manmohan Singh"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "A",
+                "C",
+                "D"
+            ]
+        },
+        {
+            "question": "Arrange these planets by size (Smallest to Largest)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Earth"
+                },
+                {
+                    "id": "B",
+                    "text": "Mercury"
+                },
+                {
+                    "id": "C",
+                    "text": "Jupiter"
+                },
+                {
+                    "id": "D",
+                    "text": "Mars"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "D",
+                "A",
+                "C"
+            ]
+        },
+        {
+            "question": "Arrange these layers of the Atmosphere from Earth's surface upwards",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Stratosphere"
+                },
+                {
+                    "id": "B",
+                    "text": "Troposphere"
+                },
+                {
+                    "id": "C",
+                    "text": "Exosphere"
+                },
+                {
+                    "id": "D",
+                    "text": "Mesosphere"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "A",
+                "D",
+                "C"
+            ]
+        },
+        {
+            "question": "Arrange these Indian states from North to South",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Tamil Nadu"
+                },
+                {
+                    "id": "B",
+                    "text": "Madhya Pradesh"
+                },
+                {
+                    "id": "C",
+                    "text": "Himachal Pradesh"
+                },
+                {
+                    "id": "D",
+                    "text": "Maharashtra"
+                }
+            ],
+            "correctOrder": [
+                "C",
+                "B",
+                "D",
+                "A"
+            ]
+        },
+        {
+            "question": "Arrange these units of storage from Smallest to Largest",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Gigabyte (GB)"
+                },
+                {
+                    "id": "B",
+                    "text": "Kilobyte (KB)"
+                },
+                {
+                    "id": "C",
+                    "text": "Terabyte (TB)"
+                },
+                {
+                    "id": "D",
+                    "text": "Megabyte (MB)"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "D",
+                "A",
+                "C"
+            ]
+        },
+        {
+            "question": "Arrange these actors by their debut year (Earliest First)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Shah Rukh Khan"
+                },
+                {
+                    "id": "B",
+                    "text": "Amitabh Bachchan"
+                },
+                {
+                    "id": "C",
+                    "text": "Ranbir Kapoor"
+                },
+                {
+                    "id": "D",
+                    "text": "Aamir Khan"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "D",
+                "A",
+                "C"
+            ]
+        },
+        {
+            "question": "Arrange these cricket formats by match duration (Shortest to Longest)",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Test Match"
+                },
+                {
+                    "id": "B",
+                    "text": "T20"
+                },
+                {
+                    "id": "C",
+                    "text": "ODI (One Day International)"
+                },
+                {
+                    "id": "D",
+                    "text": "The Hundred"
+                }
+            ],
+            "correctOrder": [
+                "D",
+                "B",
+                "C",
+                "A"
+            ]
+        },
+        {
+            "question": "Arrange these movies by their release year",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "3 Idiots"
+                },
+                {
+                    "id": "B",
+                    "text": "Dilwale Dulhania Le Jayenge"
+                },
+                {
+                    "id": "C",
+                    "text": "Sholay"
+                },
+                {
+                    "id": "D",
+                    "text": "Bahubali: The Beginning"
+                }
+            ],
+            "correctOrder": [
+                "C",
+                "B",
+                "A",
+                "D"
+            ]
+        },
+        {
+            "question": "Arrange these 'Avengers' movies in release order",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Endgame"
+                },
+                {
+                    "id": "B",
+                    "text": "The Avengers"
+                },
+                {
+                    "id": "C",
+                    "text": "Infinity War"
+                },
+                {
+                    "id": "D",
+                    "text": "Age of Ultron"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "D",
+                "C",
+                "A"
+            ]
+        },
+        {
+            "question": "Arrange these stages of human life in order",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Adulthood"
+                },
+                {
+                    "id": "B",
+                    "text": "Infancy"
+                },
+                {
+                    "id": "C",
+                    "text": "Adolescence"
+                },
+                {
+                    "id": "D",
+                    "text": "Old Age"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "C",
+                "A",
+                "D"
+            ]
+        },
+        {
+            "question": "Arrange these parts of a tree from bottom to top",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Trunk"
+                },
+                {
+                    "id": "B",
+                    "text": "Roots"
+                },
+                {
+                    "id": "C",
+                    "text": "Leaves"
+                },
+                {
+                    "id": "D",
+                    "text": "Branches"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "A",
+                "D",
+                "C"
+            ]
+        },
+        {
+            "question": "Arrange these meals in the order they are typically eaten",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Dinner"
+                },
+                {
+                    "id": "B",
+                    "text": "Breakfast"
+                },
+                {
+                    "id": "C",
+                    "text": "Lunch"
+                },
+                {
+                    "id": "D",
+                    "text": "Snacks"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "C",
+                "D",
+                "A"
+            ]
+        },
+        {
+            "question": "Arrange these mathematical values from Smallest to Largest",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "Pythagoras Constant (√2 ≈ 1.41)"
+                },
+                {
+                    "id": "B",
+                    "text": "Pi (π ≈ 3.14)"
+                },
+                {
+                    "id": "C",
+                    "text": "Euler's Number (e ≈ 2.71)"
+                },
+                {
+                    "id": "D",
+                    "text": "Golden Ratio (φ ≈ 1.61)"
+                }
+            ],
+            "correctOrder": [
+                "A",
+                "D",
+                "C",
+                "B"
+            ]
+        },
+        {
+            "question": "Arrange these Roman Numerals from Smallest to Largest",
+            "options": [
+                {
+                    "id": "A",
+                    "text": "L (50)"
+                },
+                {
+                    "id": "B",
+                    "text": "X (10)"
+                },
+                {
+                    "id": "C",
+                    "text": "C (100)"
+                },
+                {
+                    "id": "D",
+                    "text": "M (1000)"
+                }
+            ],
+            "correctOrder": [
+                "B",
+                "A",
+                "C",
+                "D"
+            ]
+        }
+    ]
+}
