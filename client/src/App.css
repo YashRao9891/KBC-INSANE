@@ -1337,20 +1337,29 @@ body {
   .top-card {
     width: 90%;
     transform: none !important;
-    /* Stop the gold/silver scale differences from creating uneven heights on mobile */
+  }
+
+  .leaderboard-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
   }
 
   .leaderboard-table th,
   .leaderboard-table td {
-    padding: 8px 5px;
-    font-size: 0.8rem;
+    padding: 6px 4px;
+    font-size: 0.75rem;
   }
 
-  /* The Time column was wrapping terribly. Hide or shrink it if necessary. */
+  .player-cell img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
   .leaderboard-table th:nth-child(5),
   .leaderboard-table td:nth-child(5) {
-    font-size: 0.7rem;
-    white-space: nowrap;
+    font-size: 0.65rem;
   }
 
   /* Restored missing rules */
