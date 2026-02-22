@@ -3,6 +3,7 @@ import axios from "axios";
 import confetti from "canvas-confetti";
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { Bar } from "react-chartjs-2";
+import html2canvas from "html2canvas";
 import "chart.js/auto";
 import "./App.css";
 import { fetchHybridQuestions, fetchFromOpenTDB, OPENTDB_CATEGORY_MAP } from "./fetchQuestions";
@@ -391,6 +392,50 @@ export default function App() {
     /* Time Tracking State */
     const [totalTimeTaken, setTotalTimeTaken] = useState(0);
     const [questionStartTime, setQuestionStartTime] = useState(null);
+
+    const gameOverRef = useRef(null);
+    const [isSharing, setIsSharing] = useState(false);
+
+    const handleShare = async () => {
+        if (!gameOverRef.current) return;
+        setIsSharing(true);
+
+        try {
+            const canvas = await html2canvas(gameOverRef.current, {
+                backgroundColor: "#02050a",
+                scale: 2,
+            });
+
+            canvas.toBlob(async (blob) => {
+                if (!blob) return;
+                const file = new File([blob], "kbc_score.png", { type: "image/png" });
+
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    try {
+                        await navigator.share({
+                            title: 'KBC Insane Score!',
+                            text: `I just scored ₹${score.toLocaleString('en-IN')} on KBC Insane! Can you beat me? 🏆🔥`,
+                            files: [file],
+                        });
+                    } catch (err) {
+                        console.log("User cancelled share or share failed", err);
+                    }
+                } else {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = "kbc_highscore.png";
+                    a.click();
+                    URL.revokeObjectURL(url);
+                }
+                setIsSharing(false);
+            }, "image/png");
+
+        } catch (error) {
+            console.error("Failed to generate image", error);
+            setIsSharing(false);
+        }
+    };
 
     /* ── Admin Mode State ── */
     const [showAdminModal, setShowAdminModal] = useState(false);
@@ -962,55 +1007,33 @@ export default function App() {
         showCommentary(pickRandom(COMMENTARY.audiencePoll), 5000, 'dramatic');
     };
 
-    const phoneFriend = () => {
+    const askAILifeline = async () => {
         if (phoneUsed) return;
 
         if (themeMusic.current) {
             themeMusic.current.volume = 0.1;
         }
         setShowPhoneModal(true);
-        setPhoneMessage(`📞 Calling ${friendName}...`);
+        setPhoneMessage(`🤖 The AI is analyzing the question...`);
 
-        // Reset & play ringing
+        // Sound effect (can reuse ringing or add a technical sci-fi sound later)
         if (ringSound.current) {
             ringSound.current.currentTime = 0;
-            ringSound.current.loop = true; // keep ringing
+            ringSound.current.loop = true;
             ringSound.current.volume = 1;
             ringSound.current.play();
         }
 
-        setTimeout(() => {
-            const correctIndex = questions[current].correct - 1;
-            const chance = Math.random();
+        try {
+            const res = await axios.post(`${API}/api/ask-ai`, {
+                question: questions[current].question,
+                options: questions[current].options,
+                currentPrize: questions[current].prize
+            });
 
-            let suggestion;
-            let confidence;
-            let optionLetter;
-
-            const difficultyFactor = current / 16;
-            const accuracy = 0.85 - difficultyFactor * 0.4;
-
-            if (chance < accuracy) {
-                suggestion = questions[current].options[correctIndex];
-                confidence = Math.floor(Math.random() * 21) + 70;
-                optionLetter = String.fromCharCode(65 + correctIndex);
-            } else {
-                const wrongIndexes = questions[current].options
-                    .map((_, i) => i)
-                    .filter(i => i !== correctIndex);
-
-                const randomIndex =
-                    wrongIndexes[Math.floor(Math.random() * wrongIndexes.length)];
-
-                suggestion = questions[current].options[randomIndex];
-                confidence = Math.floor(Math.random() * 40) + 40;
-                optionLetter = String.fromCharCode(65 + randomIndex);
-            }
-
-            // 🔥 STOP RINGING HERE
+            // Stop sound
             const fadeOutRing = () => {
                 if (!ringSound.current) return;
-
                 const fadeInterval = setInterval(() => {
                     if (ringSound.current.volume > 0.05) {
                         ringSound.current.volume -= 0.05;
@@ -1025,17 +1048,21 @@ export default function App() {
             };
             fadeOutRing();
 
-            setPhoneMessage(
-                `📞 ${friendName} says:\n"I think it's Option ${optionLetter} - ${suggestion}. I'm ${confidence}% sure."`
-            );
-            if (themeMusic.current) {
-                themeMusic.current.volume = 0.4;
-            }
+            setPhoneMessage(`🤖 AI Assistant:\n\n${res.data.answer}`);
 
-            setPhoneUsed(true);
-            setLifelineTriggeredThisQuestion(true);
-            showCommentary(pickRandom(COMMENTARY.phoneFriend), 5000, 'dramatic');
-        }, 2500);
+        } catch (err) {
+            console.error("AI Error:", err);
+            // Fallback if AI is down
+            setPhoneMessage("🤖 Error: My neural nets are tangled! I'm sorry, I cannot process this right now.");
+        }
+
+        if (themeMusic.current) {
+            themeMusic.current.volume = 0.4;
+        }
+
+        setPhoneUsed(true);
+        setLifelineTriggeredThisQuestion(true);
+        showCommentary("Let's see what the AI has to say!", 5000, 'excited');
     };
 
 
@@ -1385,17 +1412,6 @@ export default function App() {
                         )}
                     </div>
 
-                    <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "center", marginTop: "10px" }}>
-                        <input
-                            type="text"
-                            placeholder="Friend's Name (For Lifeline)"
-                            value={nameInput}
-                            onChange={(e) => setNameInput(e.target.value)}
-                            className="friend-input"
-                            style={{ width: '80%', maxWidth: '300px' }}
-                        />
-                    </div>
-
                     <div className="start-button-container">
                         <button
                             className="start-btn"
@@ -1403,11 +1419,8 @@ export default function App() {
                                 if (playerNameInput.trim() === "") return;
                                 primeAudio(); // Unlock audio
                                 localStorage.setItem("kbcPlayerName", playerNameInput.trim());
-                                // Default friend name or keep the old one
-                                localStorage.setItem("kbcFriendName", nameInput.trim() || "Your Friend");
                                 localStorage.setItem("kbcAvatar", avatar);
                                 setPlayerName(playerNameInput.trim());
-                                setFriendName(nameInput.trim() || "Your Friend");
                                 setShowCategorySelection(true);
                             }}
                         >
@@ -1590,7 +1603,7 @@ export default function App() {
         const isWin = score > 0;
         return (
             <div className={`container ${isWin ? "difficulty-8" : "difficulty-0"}`}>
-                <div className={`game-over ${isWin ? "won" : "lost"}`}>
+                <div className={`game-over ${isWin ? "won" : "lost"}`} ref={gameOverRef}>
                     <Particles />
                     <motion.h1
                         initial={{ opacity: 0, scale: 0.5, y: 30 }}
@@ -1703,9 +1716,22 @@ export default function App() {
                         </div>
                     )}
 
-                    <button className="restart-btn" onClick={restartGame}>
-                        🔄 Play Again
-                    </button>
+                    {!isSharing && (
+                        <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                            <button
+                                className="restart-btn"
+                                onClick={handleShare}
+                                style={{ background: 'linear-gradient(45deg, #25D366, #128C7E)', color: 'white' }}
+                                disabled={isSharing}
+                            >
+                                {isSharing ? '📸 Generating...' : '📸 Share Score'}
+                            </button>
+
+                            <button className="restart-btn" onClick={restartGame}>
+                                🔄 Play Again
+                            </button>
+                        </div>
+                    )}
                 </div>
             </div>
         );
@@ -1905,11 +1931,11 @@ export default function App() {
 
                             <button
                                 className="lifeline-circle"
-                                onClick={phoneFriend}
+                                onClick={askAILifeline}
                                 disabled={phoneUsed || isReading}
-                                title="Phone a Friend"
+                                title="Ask the AI"
                             >
-                                📞
+                                🤖
                             </button>
                             <button
                                 className={`lifeline-circle ${flipUsed ? "used" : ""}`}
@@ -1962,250 +1988,174 @@ export default function App() {
                 </div> {/*close right-pane */}
 
             </div> {/*close game-layout */}
-            {showPollModal && (
-                <div className="modal-overlay" onClick={() => setShowPollModal(false)}>
-                    <div className="modal" onClick={(e) => e.stopPropagation()}>
-                        <h3>📊 Audience Poll</h3>
+            {
+                showPollModal && (
+                    <div className="modal-overlay" onClick={() => setShowPollModal(false)}>
+                        <div className="modal" onClick={(e) => e.stopPropagation()}>
+                            <h3>📊 Audience Poll</h3>
 
-                        {questions[current].options.map((opt, i) =>
-                            opt && (
-                                <div key={i} className="poll-row">
-                                    <span className="poll-option">{String.fromCharCode(65 + i)}. {opt}</span>
-                                    <div className="poll-bar-container">
-                                        <div
-                                            className="poll-bar"
-                                            style={{ width: `${audiencePoll[i]}%` }}
-                                        ></div>
+                            {questions[current].options.map((opt, i) =>
+                                opt && (
+                                    <div key={i} className="poll-row">
+                                        <span className="poll-option">{String.fromCharCode(65 + i)}. {opt}</span>
+                                        <div className="poll-bar-container">
+                                            <div
+                                                className="poll-bar"
+                                                style={{ width: `${audiencePoll[i]}%` }}
+                                            ></div>
+                                        </div>
+                                        <span className="poll-percent">{audiencePoll[i]}%</span>
                                     </div>
-                                    <span className="poll-percent">{audiencePoll[i]}%</span>
-                                </div>
-                            )
-                        )}
+                                )
+                            )}
 
-                        <button className="lifeline" onClick={() => setShowPollModal(false)}>
-                            Close
-                        </button>
+                            <button className="lifeline" onClick={() => setShowPollModal(false)}>
+                                Close
+                            </button>
+                        </div>
                     </div>
-                </div>
-            )}
-            {showWalkAwayConfirm && (
-                <div className="modal-overlay" onClick={() => setShowWalkAwayConfirm(false)}>
-                    <div className="modal" onClick={(e) => e.stopPropagation()}>
-                        <h3>🚪 Walk Away?</h3>
-                        <p style={{ fontSize: '1.1rem', margin: '16px 0' }}>
-                            Are you sure you want to walk away with <strong style={{ color: '#ffd700' }}>₹{score.toLocaleString('en-IN')}</strong>?
-                        </p>
-                        <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+                )
+            }
+            {
+                showWalkAwayConfirm && (
+                    <div className="modal-overlay" onClick={() => setShowWalkAwayConfirm(false)}>
+                        <div className="modal" onClick={(e) => e.stopPropagation()}>
+                            <h3>🚪 Walk Away?</h3>
+                            <p style={{ fontSize: '1.1rem', margin: '16px 0' }}>
+                                Are you sure you want to walk away with <strong style={{ color: '#ffd700' }}>₹{score.toLocaleString('en-IN')}</strong>?
+                            </p>
+                            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+                                <button
+                                    className="lifeline"
+                                    style={{ background: 'linear-gradient(135deg, #e53935, #b71c1c)', flex: 1 }}
+                                    onClick={() => {
+                                        setShowWalkAwayConfirm(false);
+                                        handleWalkAway();
+                                    }}
+                                >
+                                    Yes, Walk Away
+                                </button>
+                                <button
+                                    className="lifeline"
+                                    style={{ background: 'linear-gradient(135deg, #43a047, #1b5e20)', flex: 1 }}
+                                    onClick={() => setShowWalkAwayConfirm(false)}
+                                >
+                                    No, Keep Playing
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )
+            }
+            {
+                showPhoneModal && (
+                    <div
+                        className="modal-overlay"
+                        onClick={() => {
+                            if (ringSound.current) {
+                                ringSound.current.pause();
+                                ringSound.current.currentTime = 0;
+                                ringSound.current.loop = false;
+                            }
+                            setShowPhoneModal(false);
+                        }}
+                    >
+
+                        <div className="modal" onClick={(e) => e.stopPropagation()}>
+                            <h3>🤖 Ask the AI</h3>
+
+                            <p className={`phone-text ${phoneMessage.includes("analyzing") ? "calling" : ""}`} style={{ whiteSpace: 'pre-wrap', textAlign: 'left', background: 'rgba(0,0,0,0.5)', padding: '15px', borderRadius: '10px', marginTop: '15px' }}>
+                                {phoneMessage}
+                            </p>
+
                             <button
                                 className="lifeline"
-                                style={{ background: 'linear-gradient(135deg, #e53935, #b71c1c)', flex: 1 }}
                                 onClick={() => {
-                                    setShowWalkAwayConfirm(false);
-                                    handleWalkAway();
+                                    if (ringSound.current) {
+                                        ringSound.current.pause();
+                                        ringSound.current.currentTime = 0;
+                                        ringSound.current.loop = false;
+                                    }
+                                    setShowPhoneModal(false);
                                 }}
                             >
-                                Yes, Walk Away
+                                Close
                             </button>
+                        </div>
+                    </div>
+                )
+            }
+
+            {
+                pendingAnswer !== null && (
+                    <div className="modal-overlay">
+                        <div className={`modal ${questions[current]?.jackpot ? "jackpot-modal" : ""
+                            }`}>
+                            <h3>
+                                {questions[current]?.jackpot
+                                    ? "🔥 FINAL ANSWER? THIS IS FOR ₹7 CRORE!"
+                                    : questions[current]?.milestone
+                                        ? "⭐ This is a milestone question. Lock it?"
+                                        : "🔒 Lock this answer?"}
+                            </h3>
+
+
+                            <button
+                                className={`lifeline ${questions[current]?.jackpot ? "jackpot-lock" : ""
+                                    }`}
+                                onClick={() => {
+                                    setIsLocking(false);
+                                    handleAnswer(pendingAnswer);
+                                    setPendingAnswer(null);
+                                }}
+                            >
+                                {questions[current]?.jackpot
+                                    ? "🔥 FINAL ANSWER"
+                                    : questions[current]?.milestone
+                                        ? "⭐ Lock Milestone Answer"
+                                        : "Yes, Lock It"}
+                            </button>
+
+
                             <button
                                 className="lifeline"
-                                style={{ background: 'linear-gradient(135deg, #43a047, #1b5e20)', flex: 1 }}
-                                onClick={() => setShowWalkAwayConfirm(false)}
+                                onClick={() => {
+                                    setIsLocking(false);
+                                    setPendingAnswer(null);
+                                }}
                             >
-                                No, Keep Playing
+                                Cancel
                             </button>
                         </div>
                     </div>
-                </div>
-            )}
-            {showPhoneModal && (
-                <div
-                    className="modal-overlay"
-                    onClick={() => {
-                        if (ringSound.current) {
-                            ringSound.current.pause();
-                            ringSound.current.currentTime = 0;
-                            ringSound.current.loop = false;
-                        }
-                        setShowPhoneModal(false);
-                    }}
-                >
-
-                    <div className="modal" onClick={(e) => e.stopPropagation()}>
-                        <h3>📞 Phone a Friend</h3>
-
-                        <p className={`phone-text ${phoneMessage.includes("Calling") ? "calling" : ""}`}>
-                            {phoneMessage}
-                        </p>
-
-                        <button
-                            className="lifeline"
-                            onClick={() => {
-                                if (ringSound.current) {
-                                    ringSound.current.pause();
-                                    ringSound.current.currentTime = 0;
-                                    ringSound.current.loop = false;
-                                }
-                                setShowPhoneModal(false);
-                            }}
-                        >
-                            Close
-                        </button>
-                    </div>
-                </div>
-            )}
-
-            {pendingAnswer !== null && (
-                <div className="modal-overlay">
-                    <div className={`modal ${questions[current]?.jackpot ? "jackpot-modal" : ""
-                        }`}>
-                        <h3>
-                            {questions[current]?.jackpot
-                                ? "🔥 FINAL ANSWER? THIS IS FOR ₹7 CRORE!"
-                                : questions[current]?.milestone
-                                    ? "⭐ This is a milestone question. Lock it?"
-                                    : "🔒 Lock this answer?"}
-                        </h3>
-
-
-                        <button
-                            className={`lifeline ${questions[current]?.jackpot ? "jackpot-lock" : ""
-                                }`}
-                            onClick={() => {
-                                setIsLocking(false);
-                                handleAnswer(pendingAnswer);
-                                setPendingAnswer(null);
-                            }}
-                        >
-                            {questions[current]?.jackpot
-                                ? "🔥 FINAL ANSWER"
-                                : questions[current]?.milestone
-                                    ? "⭐ Lock Milestone Answer"
-                                    : "Yes, Lock It"}
-                        </button>
-
-
-                        <button
-                            className="lifeline"
-                            onClick={() => {
-                                setIsLocking(false);
-                                setPendingAnswer(null);
-                            }}
-                        >
-                            Cancel
-                        </button>
-                    </div>
-                </div>
-            )}
+                )
+            }
 
             {/* ── Admin Modal ── */}
-            {showAdminModal && (
-                <div className="modal-overlay" onClick={() => setShowAdminModal(false)}>
-                    <div className="modal admin-modal" onClick={e => e.stopPropagation()}>
-                        <h3>🛠️ Admin Panel</h3>
+            {
+                showAdminModal && (
+                    <div className="modal-overlay" onClick={() => setShowAdminModal(false)}>
+                        <div className="modal admin-modal" onClick={e => e.stopPropagation()}>
+                            <h3>🛠️ Admin Panel</h3>
 
-                        <div className="admin-tabs">
-                            <button
-                                className={`tab-btn ${adminView === "add" ? "active" : ""}`}
-                                onClick={() => setAdminView("add")}
-                            >
-                                ➕ Add New
-                            </button>
-                            <button
-                                className={`tab-btn ${adminView === "list" ? "active" : ""}`}
-                                onClick={() => setAdminView("list")}
-                            >
-                                📋 Manage Questions
-                            </button>
-                        </div>
-
-                        {adminView === "add" ? (
-                            <div className="admin-grid">
-                                <label>Level (1-16):</label>
-                                <select
-                                    value={adminForm.level}
-                                    onChange={e => setAdminForm({ ...adminForm, level: e.target.value })}
+                            <div className="admin-tabs">
+                                <button
+                                    className={`tab-btn ${adminView === "add" ? "active" : ""}`}
+                                    onClick={() => setAdminView("add")}
                                 >
-                                    {Array.from({ length: 16 }, (_, i) => i + 1).map(num => (
-                                        <option key={num} value={num}>Level {num}</option>
-                                    ))}
-                                </select>
-
-                                <label>Category:</label>
-                                <select
-                                    value={adminForm.category}
-                                    onChange={e => setAdminForm({ ...adminForm, category: e.target.value })}
+                                    ➕ Add New
+                                </button>
+                                <button
+                                    className={`tab-btn ${adminView === "list" ? "active" : ""}`}
+                                    onClick={() => setAdminView("list")}
                                 >
-                                    {CATEGORIES.map(cat => (
-                                        <option key={cat.id} value={cat.id}>{cat.icon} {cat.name}</option>
-                                    ))}
-                                </select>
-
-                                <label>Question:</label>
-                                <textarea
-                                    value={adminForm.question}
-                                    onChange={e => setAdminForm({ ...adminForm, question: e.target.value })}
-                                    placeholder="Enter the question here..."
-                                    rows="3"
-                                />
-
-                                <label>Option A:</label>
-                                <input
-                                    type="text"
-                                    value={adminForm.optionA}
-                                    onChange={e => setAdminForm({ ...adminForm, optionA: e.target.value })}
-                                    placeholder="Option A"
-                                />
-
-                                <label>Option B:</label>
-                                <input
-                                    type="text"
-                                    value={adminForm.optionB}
-                                    onChange={e => setAdminForm({ ...adminForm, optionB: e.target.value })}
-                                    placeholder="Option B"
-                                />
-
-                                <label>Option C:</label>
-                                <input
-                                    type="text"
-                                    value={adminForm.optionC}
-                                    onChange={e => setAdminForm({ ...adminForm, optionC: e.target.value })}
-                                    placeholder="Option C"
-                                />
-
-                                <label>Option D:</label>
-                                <input
-                                    type="text"
-                                    value={adminForm.optionD}
-                                    onChange={e => setAdminForm({ ...adminForm, optionD: e.target.value })}
-                                    placeholder="Option D"
-                                />
-
-                                <label>Correct Option:</label>
-                                <select
-                                    value={adminForm.correct}
-                                    onChange={e => setAdminForm({ ...adminForm, correct: e.target.value })}
-                                >
-                                    <option value="1">Option A</option>
-                                    <option value="2">Option B</option>
-                                    <option value="3">Option C</option>
-                                    <option value="4">Option D</option>
-                                </select>
+                                    📋 Manage Questions
+                                </button>
                             </div>
-                        ) : (
-                            <div className="admin-list-view">
-                                <div className="level-selector">
-                                    <div className="admin-form-group">
-                                        <label>Category:</label>
-                                        <select
-                                            value={adminForm.category}
-                                            onChange={e => setAdminForm({ ...adminForm, category: e.target.value })}
-                                        >
-                                            {CATEGORIES.map(cat => (
-                                                <option key={cat.id} value={cat.id}>{cat.icon} {cat.name}</option>
-                                            ))}
-                                        </select>
-                                    </div>
-                                    <label>Select Level to View:</label>
+
+                            {adminView === "add" ? (
+                                <div className="admin-grid">
+                                    <label>Level (1-16):</label>
                                     <select
                                         value={adminForm.level}
                                         onChange={e => setAdminForm({ ...adminForm, level: e.target.value })}
@@ -2214,55 +2164,141 @@ export default function App() {
                                             <option key={num} value={num}>Level {num}</option>
                                         ))}
                                     </select>
-                                </div>
 
-                                <div className="questions-list">
-                                    {adminQuestions.length === 0 ? (
-                                        <p className="no-data">No questions found for Level {adminForm.level}</p>
-                                    ) : (
-                                        adminQuestions.map((q, idx) => (
-                                            <div key={idx} className="question-item">
-                                                <div className="q-content">
-                                                    <strong>Q: {q.question}</strong>
-                                                    <div className="q-options">
-                                                        {q.options.map((opt, i) => (
-                                                            <span key={i} className={i + 1 === q.correct ? "correct-opt" : ""}>
-                                                                {String.fromCharCode(65 + i)}: {opt}
-                                                            </span>
-                                                        ))}
+                                    <label>Category:</label>
+                                    <select
+                                        value={adminForm.category}
+                                        onChange={e => setAdminForm({ ...adminForm, category: e.target.value })}
+                                    >
+                                        {CATEGORIES.map(cat => (
+                                            <option key={cat.id} value={cat.id}>{cat.icon} {cat.name}</option>
+                                        ))}
+                                    </select>
+
+                                    <label>Question:</label>
+                                    <textarea
+                                        value={adminForm.question}
+                                        onChange={e => setAdminForm({ ...adminForm, question: e.target.value })}
+                                        placeholder="Enter the question here..."
+                                        rows="3"
+                                    />
+
+                                    <label>Option A:</label>
+                                    <input
+                                        type="text"
+                                        value={adminForm.optionA}
+                                        onChange={e => setAdminForm({ ...adminForm, optionA: e.target.value })}
+                                        placeholder="Option A"
+                                    />
+
+                                    <label>Option B:</label>
+                                    <input
+                                        type="text"
+                                        value={adminForm.optionB}
+                                        onChange={e => setAdminForm({ ...adminForm, optionB: e.target.value })}
+                                        placeholder="Option B"
+                                    />
+
+                                    <label>Option C:</label>
+                                    <input
+                                        type="text"
+                                        value={adminForm.optionC}
+                                        onChange={e => setAdminForm({ ...adminForm, optionC: e.target.value })}
+                                        placeholder="Option C"
+                                    />
+
+                                    <label>Option D:</label>
+                                    <input
+                                        type="text"
+                                        value={adminForm.optionD}
+                                        onChange={e => setAdminForm({ ...adminForm, optionD: e.target.value })}
+                                        placeholder="Option D"
+                                    />
+
+                                    <label>Correct Option:</label>
+                                    <select
+                                        value={adminForm.correct}
+                                        onChange={e => setAdminForm({ ...adminForm, correct: e.target.value })}
+                                    >
+                                        <option value="1">Option A</option>
+                                        <option value="2">Option B</option>
+                                        <option value="3">Option C</option>
+                                        <option value="4">Option D</option>
+                                    </select>
+                                </div>
+                            ) : (
+                                <div className="admin-list-view">
+                                    <div className="level-selector">
+                                        <div className="admin-form-group">
+                                            <label>Category:</label>
+                                            <select
+                                                value={adminForm.category}
+                                                onChange={e => setAdminForm({ ...adminForm, category: e.target.value })}
+                                            >
+                                                {CATEGORIES.map(cat => (
+                                                    <option key={cat.id} value={cat.id}>{cat.icon} {cat.name}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <label>Select Level to View:</label>
+                                        <select
+                                            value={adminForm.level}
+                                            onChange={e => setAdminForm({ ...adminForm, level: e.target.value })}
+                                        >
+                                            {Array.from({ length: 16 }, (_, i) => i + 1).map(num => (
+                                                <option key={num} value={num}>Level {num}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    <div className="questions-list">
+                                        {adminQuestions.length === 0 ? (
+                                            <p className="no-data">No questions found for Level {adminForm.level}</p>
+                                        ) : (
+                                            adminQuestions.map((q, idx) => (
+                                                <div key={idx} className="question-item">
+                                                    <div className="q-content">
+                                                        <strong>Q: {q.question}</strong>
+                                                        <div className="q-options">
+                                                            {q.options.map((opt, i) => (
+                                                                <span key={i} className={i + 1 === q.correct ? "correct-opt" : ""}>
+                                                                    {String.fromCharCode(65 + i)}: {opt}
+                                                                </span>
+                                                            ))}
+                                                        </div>
                                                     </div>
+                                                    <button
+                                                        className="delete-btn"
+                                                        onClick={() => handleDeleteQuestion(idx)}
+                                                        title="Delete Question"
+                                                    >
+                                                        🗑️
+                                                    </button>
                                                 </div>
-                                                <button
-                                                    className="delete-btn"
-                                                    onClick={() => handleDeleteQuestion(idx)}
-                                                    title="Delete Question"
-                                                >
-                                                    🗑️
-                                                </button>
-                                            </div>
-                                        ))
-                                    )}
+                                            ))
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                        )}
-
-                        <div className="modal-actions">
-                            {adminView === "add" && (
-                                <button className="lifeline" onClick={handleAdminSubmit}>
-                                    💾 Save Question
-                                </button>
                             )}
-                            <button
-                                className="lifeline"
-                                style={{ background: '#444', color: '#ccc' }}
-                                onClick={() => setShowAdminModal(false)}
-                            >
-                                Cancel
-                            </button>
+
+                            <div className="modal-actions">
+                                {adminView === "add" && (
+                                    <button className="lifeline" onClick={handleAdminSubmit}>
+                                        💾 Save Question
+                                    </button>
+                                )}
+                                <button
+                                    className="lifeline"
+                                    style={{ background: '#444', color: '#ccc' }}
+                                    onClick={() => setShowAdminModal(false)}
+                                >
+                                    Cancel
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </div>
+                )
+            }
+        </div >
     );
 }

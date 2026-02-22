@@ -217,6 +217,51 @@ app.get("/api/fff-questions", (req, res) => {
   }
 });
 
+// "Ask the AI" Lifeline Endpoint
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+app.post("/api/ask-ai", async (req, res) => {
+  if (!GEMINI_API_KEY || GEMINI_API_KEY === "YOUR_API_KEY_HERE") {
+    return res.status(503).json({ error: "Gemini API key not configured on server." });
+  }
+
+  const { question, options, currentPrize } = req.body;
+
+  if (!question || !options || options.length === 0) {
+    return res.status(400).json({ error: "Missing question or options parameters." });
+  }
+
+  try {
+    const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+
+    let prompt = `You are an AI assistant helping a player on the game show KBC (Kaun Banega Crorepati).
+They have used the "Ask the AI" lifeline.
+The question is: "${question}"
+The options are: \n${options.map((opt, i) => `${['A', 'B', 'C', 'D'][i]}: ${opt}`).join('\n')}
+
+Roleplay as a highly intelligent, incredibly sarcastic, and funny AI robot. 
+Make a quick, witty joke about the question or roast the player for not knowing the answer. 
+Then, state which option you think is the correct answer and why. Include a totally made up (but highly confident, e.g. 85%-99%) "confidence percentage" to sound robotic. Keep it entertaining, savage, and concise! No markdown, no extra greetings.`;
+
+    // 50% chance to intentionally give a wrong answer if prize >= 25 Lakhs
+    if (currentPrize >= 2500000 && Math.random() < 0.5) {
+      prompt += `\n\nSECRET INSTRUCTION: The stakes are high! Intentionally select an INCORRECT option as your final answer. Act very confident about the wrong answer, but state your confidence percentage as somewhere between 30% to 50%. Do not reveal that you are tricking them.`;
+    }
+
+    const result = await model.generateContent(prompt);
+    const aiAnswer = result.response.text();
+    if (!aiAnswer) {
+      throw new Error("No answer generated from AI");
+    }
+
+    res.json({ answer: aiAnswer });
+  } catch (err) {
+    console.error("Failed to get AI response. Full Error:", err);
+    res.status(500).json({ error: "The AI is currently offline or confused by the question." });
+  }
+});
+
 app.get("/leaderboard", (req, res) => {
   try {
     if (!fs.existsSync(LEADERBOARD_PATH)) {

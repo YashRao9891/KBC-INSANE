@@ -1,5 +1,23 @@
 [
   {
+    "name": "Test",
+    "amount": 70000000,
+    "avatar": "🤠",
+    "timeTaken": 73.22900000000001,
+    "category": "mythology",
+    "lifelinesUsed": 1,
+    "date": "2026-02-20T18:01:26.266Z"
+  },
+  {
+    "name": "Test",
+    "amount": 70000000,
+    "avatar": "🦁",
+    "timeTaken": 130.824,
+    "category": "mythology",
+    "lifelinesUsed": 1,
+    "date": "2026-02-22T06:44:51.855Z"
+  },
+  {
     "name": "Yash Rao",
     "amount": 70000000,
     "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJT7tml02tBzYY63mjn39np9xlaMFKyoF3s7y18KPtGFBtgvXQ=s96-c",
@@ -27,6 +45,15 @@
     "date": "2026-02-20T17:31:46.627Z"
   },
   {
+    "name": "Test",
+    "amount": 10000000,
+    "avatar": "🦁",
+    "timeTaken": 97.491,
+    "category": "mythology",
+    "lifelinesUsed": 2,
+    "date": "2026-02-22T06:28:02.580Z"
+  },
+  {
     "name": "Yash Rao",
     "amount": 5000000,
     "avatar": "🦁",
@@ -43,5 +70,14 @@
     "category": "mythology",
     "lifelinesUsed": 0,
     "date": "2026-02-20T11:01:12.903Z"
+  },
+  {
+    "name": "Test",
+    "amount": 10000,
+    "avatar": "🦁",
+    "timeTaken": 49.644,
+    "category": "general",
+    "lifelinesUsed": 1,
+    "date": "2026-02-22T06:30:05.866Z"
   }
 ]
